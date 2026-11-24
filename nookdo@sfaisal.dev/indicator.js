@@ -6,7 +6,6 @@ import Gio from 'gi://Gio';
 import St from 'gi://St';
 import Clutter from 'gi://Clutter';
 import Pango from 'gi://Pango';
-import Cairo from 'cairo';
 
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
@@ -79,11 +78,6 @@ function vbox(params = {}) {
     else
         box.vertical = true;
     return box;
-}
-
-function hexToRgb(hex) {
-    const n = Number.parseInt(hex.slice(1), 16);
-    return [((n >> 16) & 255) / 255, ((n >> 8) & 255) / 255, (n & 255) / 255];
 }
 
 function relativeTime(ms) {
@@ -360,8 +354,6 @@ class NookdoIndicator extends PanelMenu.Button {
         this._priority = 0;
         this._timeouts = new Set();
         this._settingsIds = [];
-        this._ringValue = 0;
-        this._ringTimeline = null;
         this._emptyShown = null;
         this._lastPending = this._store.pendingCount;
         this._undoTasks = [];
@@ -479,25 +471,7 @@ class NookdoIndicator extends PanelMenu.Button {
         titles.add_child(this._subtitle);
         this._titles = titles;
 
-        this._ringWrap = new St.Widget({
-            style_class: 'nookdo-ring',
-            layout_manager: new Clutter.BinLayout(),
-            y_align: Clutter.ActorAlign.CENTER,
-        });
-        this._ringWrap.set_pivot_point(0.5, 0.5);
-        this._ring = new St.DrawingArea({x_expand: true, y_expand: true});
-        this._ring.connect('repaint', area => this._paintRing(area));
-        this._ringLabel = new St.Label({
-            style_class: 'nookdo-ring-label',
-            x_align: Clutter.ActorAlign.CENTER,
-            y_align: Clutter.ActorAlign.CENTER,
-            text: '0%',
-        });
-        this._ringWrap.add_child(this._ring);
-        this._ringWrap.add_child(this._ringLabel);
-
         header.add_child(titles);
-        header.add_child(this._ringWrap);
         this._header = header;
         this._content.add_child(header);
     }
@@ -708,7 +682,6 @@ class NookdoIndicator extends PanelMenu.Button {
         }
         this._accent = accent;
         this._theme = theme;
-        this._ring.queue_repaint();
     }
 
     /* ---------------- helpers ---------------- */
@@ -775,14 +748,10 @@ class NookdoIndicator extends PanelMenu.Button {
         for (const row of this._rows.values())
             row.updateMeta();
 
-        // Header & ring entrance
+        // Header entrance
         this._titles.opacity = 0;
         this._titles.translation_y = 8;
         this._titles.ease({opacity: 255, translation_y: 0, duration: 420, delay: 40, mode: M.EASE_OUT_EXPO});
-        this._ringWrap.scale_x = this._ringWrap.scale_y = 0.6;
-        this._ringWrap.opacity = 0;
-        this._ringWrap.ease({scale_x: 1, scale_y: 1, opacity: 255, duration: 520, delay: 80, mode: M.EASE_OUT_BACK});
-        this._animateRing(this._ratio(), 0);
 
         for (const [i, actor] of [this._addBar, this._tabsWrap].entries()) {
             actor.opacity = 0;
@@ -854,66 +823,6 @@ class NookdoIndicator extends PanelMenu.Button {
         this._autoCloseTimer = this._cancel(this._autoCloseTimer);
     }
 
-    /* ---------------- progress ring ---------------- */
-
-    _ratio() {
-        const total = this._store.total;
-        return total ? this._store.doneCount / total : 0;
-    }
-
-    _animateRing(target, from = this._ringValue) {
-        if (this._ringTimeline) {
-            this._ringTimeline.stop();
-            this._ringTimeline = null;
-        }
-        const setValue = v => {
-            this._ringValue = v;
-            this._ringLabel.text = `${Math.round(v * 100)}%`;
-            this._ring.queue_repaint();
-        };
-        if (!this._ring.mapped || from === target) {
-            setValue(target);
-            return;
-        }
-        const tl = new Clutter.Timeline({actor: this._ring, duration: 900});
-        tl.set_progress_mode(M.EASE_OUT_CUBIC);
-        tl.connect('new-frame', () => setValue(from + (target - from) * tl.get_progress()));
-        tl.connect('completed', () => {
-            setValue(target);
-            if (this._ringTimeline === tl)
-                this._ringTimeline = null;
-        });
-        this._ringTimeline = tl;
-        setValue(from);
-        tl.start();
-    }
-
-    _paintRing(area) {
-        const cr = area.get_context();
-        const [w, h] = area.get_surface_size();
-        const lw = Math.max(4, Math.round(Math.min(w, h) * 0.095));
-        const r = Math.min(w, h) / 2 - lw / 2 - 1;
-        const cx = w / 2, cy = h / 2;
-
-        cr.setLineCap(Cairo.LineCap.ROUND);
-        cr.setLineWidth(lw);
-        if (this._theme === 'light')
-            cr.setSourceRGBA(0, 0, 0, 0.08);
-        else
-            cr.setSourceRGBA(1, 1, 1, 0.1);
-        cr.arc(cx, cy, r, 0, 2 * Math.PI);
-        cr.stroke();
-
-        const v = Math.max(0, Math.min(1, this._ringValue));
-        if (v > 0.001) {
-            cr.setSourceRGBA(...hexToRgb(ACCENTS[this._accent]), 1);
-            const start = -Math.PI / 2;
-            cr.arc(cx, cy, r, start, start + 2 * Math.PI * v);
-            cr.stroke();
-        }
-        cr.$dispose();
-    }
-
     /* ---------------- meta, badge, empty ---------------- */
 
     _refreshMeta(animate = true) {
@@ -936,11 +845,6 @@ class NookdoIndicator extends PanelMenu.Button {
         this._clearBtn.reactive = done > 0;
         this._clearBtn.can_focus = done > 0;
         this._clearBtn.ease({opacity: done > 0 ? 255 : 90, duration: 200, mode: M.EASE_OUT_QUAD});
-
-        if (animate)
-            this._animateRing(this._ratio());
-        else
-            this._animateRing(this._ratio(), this._ratio());
 
         this._refreshBadge(animate);
     }
@@ -1075,10 +979,10 @@ class NookdoIndicator extends PanelMenu.Button {
     _celebrate() {
         if (!this.menu.isOpen)
             return;
-        Fx.pop(this._ringWrap, 1.25, 600);
+        Fx.pop(this._subtitle, 1.12, 500);
         if (!this._settings.get_boolean('celebrate'))
             return;
-        const [x, y] = this._fxPoint(this._ringWrap);
+        const [x, y] = this._fxPoint(this._titles);
         Fx.burst(this._fx, x, y, this._confettiColors(), {count: 26, distance: 120, size: 6, duration: 1100});
         this._later(140, () => Fx.burst(this._fx, x, y, this._confettiColors(), {count: 18, distance: 70, size: 5, duration: 900}));
     }
@@ -1296,10 +1200,6 @@ class NookdoIndicator extends PanelMenu.Button {
         for (const id of this._timeouts)
             GLib.Source.remove(id);
         this._timeouts.clear();
-        if (this._ringTimeline) {
-            this._ringTimeline.stop();
-            this._ringTimeline = null;
-        }
         for (const id of this._settingsIds)
             this._settings.disconnect(id);
         this._settingsIds = [];
