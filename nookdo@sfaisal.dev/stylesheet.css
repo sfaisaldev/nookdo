@@ -1,0 +1,275 @@
+/* Nookdo — stylesheet (generated: layout, then light/dark palettes, then accents) */
+
+/* ---------- top bar ---------- */
+.nookdo-panel-box { spacing: 5px; }
+.nookdo-badge {
+  font-size: 7.5pt; font-weight: 800; color: #ffffff;
+  min-width: 9px; padding: 1px 5px; border-radius: 99px; text-align: center;
+}
+
+/* ---------- layout ---------- */
+.nookdo-menu .popup-menu-content { padding: 0; border-radius: 22px; }
+.nookdo-root { width: 376px; }
+.nookdo-content { padding: 20px 18px 14px 18px; spacing: 14px; }
+
+.nookdo-nudge { spacing: 12px; padding: 10px 14px; border-radius: 14px; }
+.nookdo-nudge-title { font-size: 10pt; font-weight: 800; }
+.nookdo-nudge-text { font-size: 9pt; }
+
+.nookdo-header { spacing: 14px; }
+.nookdo-date { font-size: 8pt; font-weight: 700; letter-spacing: 1px; padding-bottom: 3px; }
+.nookdo-title { font-size: 16.5pt; font-weight: 800; }
+.nookdo-subtitle { font-size: 9.5pt; padding-top: 3px; }
+.nookdo-ring { width: 62px; height: 62px; }
+.nookdo-ring-label { font-size: 9.5pt; font-weight: 800; }
+
+.nookdo-addbar { spacing: 6px; padding: 5px 5px 5px 14px; border-radius: 15px; border-width: 1px; border-style: solid; transition-duration: 200ms; }
+.nookdo-entry, .nookdo-entry:focus, .nookdo-entry:hover {
+  padding: 8px 0; border: none; box-shadow: none; background-color: transparent; font-size: 10.5pt;
+}
+.nookdo-prio-chip { padding: 6px 10px; border-radius: 10px; font-size: 8.5pt; font-weight: 700; transition-duration: 200ms; }
+.nookdo-prio-chip-box { spacing: 6px; }
+.nookdo-prio-dot { width: 7px; height: 7px; border-radius: 4px; }
+.nookdo-prio-1 .nookdo-prio-dot { background-color: #38bdf8; }
+.nookdo-prio-2 .nookdo-prio-dot { background-color: #f5b301; }
+.nookdo-prio-3 .nookdo-prio-dot { background-color: #f43f5e; }
+.nookdo-add-btn { width: 36px; height: 36px; border-radius: 11px; transition-duration: 200ms; }
+
+.nookdo-tabs { padding: 3px; border-radius: 12px; }
+.nookdo-tab-pill { border-radius: 9px; border-width: 1px; border-style: solid; }
+.nookdo-tab { padding: 7px 0; border-radius: 9px; font-size: 9.5pt; font-weight: 650; transition-duration: 200ms; }
+.nookdo-tab-inner { spacing: 6px; }
+.nookdo-tab-count { font-size: 8pt; font-weight: 800; }
+
+.nookdo-scroll { max-height: 340px; -st-vfade-offset: 18px; }
+.nookdo-list { spacing: 2px; }
+.nookdo-row { spacing: 11px; padding: 9px 8px 9px 6px; border-radius: 12px; transition-duration: 160ms; }
+.nookdo-bar { width: 3px; border-radius: 2px; }
+.nookdo-bar-0 { background-color: transparent; }
+.nookdo-bar-1 { background-color: #38bdf8; }
+.nookdo-bar-2 { background-color: #f5b301; }
+.nookdo-bar-3 { background-color: #f43f5e; }
+.nookdo-check { width: 18px; height: 18px; border-radius: 11px; border-width: 2px; border-style: solid; background-color: transparent; transition-duration: 200ms; }
+.nookdo-check-icon { color: #ffffff; }
+.nookdo-label { font-size: 10.5pt; }
+.nookdo-meta { font-size: 8pt; padding-top: 2px; }
+.nookdo-edit-entry, .nookdo-edit-entry:focus { padding: 4px 8px; border-radius: 8px; border: none; box-shadow: none; font-size: 10.5pt; }
+.nookdo-del { width: 26px; height: 26px; border-radius: 9px; transition-duration: 150ms; }
+
+.nookdo-empty { padding: 22px 0 18px 0; spacing: 6px; }
+.nookdo-empty-icon { padding-bottom: 8px; }
+.nookdo-empty-title { font-size: 11pt; font-weight: 800; }
+.nookdo-empty-text { font-size: 9pt; }
+
+.nookdo-toast { padding: 6px 6px 6px 14px; border-radius: 12px; spacing: 8px; }
+.nookdo-toast-label { font-size: 9.5pt; }
+.nookdo-toast-btn { padding: 5px 12px; border-radius: 9px; font-size: 9pt; font-weight: 800; transition-duration: 150ms; }
+
+.nookdo-footer { spacing: 6px; padding-top: 10px; border-top-width: 1px; border-style: solid; border-color: transparent; }
+.nookdo-count { font-size: 9pt; }
+.nookdo-ghost-btn { padding: 5px 11px; border-radius: 9px; font-size: 9pt; font-weight: 650; transition-duration: 150ms; }
+.nookdo-icon-btn { width: 30px; height: 30px; border-radius: 9px; transition-duration: 150ms; }
+
+
+/* ---------- dark palette ---------- */
+.nookdo-menu.nookdo-dark .popup-menu-content { background-color: #1e1e22; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45); }
+.nookdo-dark.nookdo-root { color: #f3f3f5; }
+.nookdo-dark .nookdo-title, .nookdo-dark .nookdo-ring-label, .nookdo-dark .nookdo-nudge-title, .nookdo-dark .nookdo-empty-title { color: #f3f3f5; }
+.nookdo-dark .nookdo-subtitle, .nookdo-dark .nookdo-nudge-text, .nookdo-dark .nookdo-toast-label { color: rgba(255, 255, 255, 0.6); }
+.nookdo-dark .nookdo-meta, .nookdo-dark .nookdo-count, .nookdo-dark .nookdo-empty-text, .nookdo-dark .nookdo-tab-count { color: rgba(255, 255, 255, 0.38); }
+.nookdo-dark .nookdo-addbar { background-color: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.07); }
+.nookdo-dark .nookdo-entry { color: #f3f3f5; selected-color: #f3f3f5; }
+.nookdo-dark .nookdo-entry StLabel.hint-text { color: rgba(255, 255, 255, 0.38); }
+.nookdo-dark .nookdo-prio-chip { color: rgba(255, 255, 255, 0.6); background-color: rgba(255, 255, 255, 0.06); }
+.nookdo-dark .nookdo-prio-chip:hover { color: #f3f3f5; background-color: rgba(255, 255, 255, 0.10); }
+.nookdo-dark .nookdo-prio-dot { background-color: rgba(255, 255, 255, 0.38); }
+.nookdo-dark .nookdo-prio-1 { color: #7dd3fc; background-color: rgba(56, 189, 248, 0.15); }
+.nookdo-dark .nookdo-prio-2 { color: #fcd34d; background-color: rgba(251, 191, 36, 0.15); }
+.nookdo-dark .nookdo-prio-3 { color: #fda4af; background-color: rgba(251, 113, 133, 0.16); }
+.nookdo-dark .nookdo-tabs { background-color: rgba(255, 255, 255, 0.06); }
+.nookdo-dark .nookdo-tab-pill { background-color: rgba(255, 255, 255, 0.11); border-color: rgba(255, 255, 255, 0.05); }
+.nookdo-dark .nookdo-tab { color: rgba(255, 255, 255, 0.6); }
+.nookdo-dark .nookdo-tab:hover, .nookdo-dark .nookdo-tab:checked { color: #f3f3f5; }
+.nookdo-dark .nookdo-row:hover { background-color: rgba(255, 255, 255, 0.05); }
+.nookdo-dark .nookdo-check { border-color: rgba(255, 255, 255, 0.3); }
+.nookdo-dark .nookdo-check:hover { border-color: rgba(255, 255, 255, 0.65); background-color: rgba(255, 255, 255, 0.05); }
+.nookdo-dark .nookdo-label { color: #f3f3f5; }
+.nookdo-dark .nookdo-row.done .nookdo-label { color: rgba(255, 255, 255, 0.36); }
+.nookdo-dark .nookdo-edit-entry { color: #f3f3f5; background-color: rgba(255, 255, 255, 0.08); }
+.nookdo-dark .nookdo-del { color: rgba(255, 255, 255, 0.38); }
+.nookdo-dark .nookdo-del:hover, .nookdo-dark .nookdo-del:focus { color: #fb7185; background-color: rgba(251, 113, 133, 0.14); }
+.nookdo-dark .nookdo-toast { background-color: rgba(255, 255, 255, 0.06); }
+.nookdo-dark .nookdo-toast-btn:hover { background-color: rgba(255, 255, 255, 0.10); }
+.nookdo-dark .nookdo-footer { border-color: rgba(255, 255, 255, 0.07); }
+.nookdo-dark .nookdo-ghost-btn, .nookdo-dark .nookdo-icon-btn { color: rgba(255, 255, 255, 0.6); }
+.nookdo-dark .nookdo-ghost-btn:hover, .nookdo-dark .nookdo-ghost-btn:focus, .nookdo-dark .nookdo-icon-btn:hover, .nookdo-dark .nookdo-icon-btn:focus { color: #f3f3f5; background-color: rgba(255, 255, 255, 0.10); }
+
+
+/* ---------- light palette ---------- */
+.nookdo-menu.nookdo-light .popup-menu-content { background-color: #ffffff; border: 1px solid rgba(0, 0, 0, 0.09); box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16); }
+.nookdo-light.nookdo-root { color: #1d1d21; }
+.nookdo-light .nookdo-title, .nookdo-light .nookdo-ring-label, .nookdo-light .nookdo-nudge-title, .nookdo-light .nookdo-empty-title { color: #1d1d21; }
+.nookdo-light .nookdo-subtitle, .nookdo-light .nookdo-nudge-text, .nookdo-light .nookdo-toast-label { color: rgba(0, 0, 0, 0.58); }
+.nookdo-light .nookdo-meta, .nookdo-light .nookdo-count, .nookdo-light .nookdo-empty-text, .nookdo-light .nookdo-tab-count { color: rgba(0, 0, 0, 0.4); }
+.nookdo-light .nookdo-addbar { background-color: rgba(0, 0, 0, 0.045); border-color: rgba(0, 0, 0, 0.06); }
+.nookdo-light .nookdo-entry { color: #1d1d21; selected-color: #1d1d21; }
+.nookdo-light .nookdo-entry StLabel.hint-text { color: rgba(0, 0, 0, 0.4); }
+.nookdo-light .nookdo-prio-chip { color: rgba(0, 0, 0, 0.58); background-color: rgba(0, 0, 0, 0.045); }
+.nookdo-light .nookdo-prio-chip:hover { color: #1d1d21; background-color: rgba(0, 0, 0, 0.08); }
+.nookdo-light .nookdo-prio-dot { background-color: rgba(0, 0, 0, 0.4); }
+.nookdo-light .nookdo-prio-1 { color: #0369a1; background-color: rgba(14, 165, 233, 0.12); }
+.nookdo-light .nookdo-prio-2 { color: #a16207; background-color: rgba(234, 179, 8, 0.16); }
+.nookdo-light .nookdo-prio-3 { color: #be123c; background-color: rgba(244, 63, 94, 0.12); }
+.nookdo-light .nookdo-tabs { background-color: rgba(0, 0, 0, 0.045); }
+.nookdo-light .nookdo-tab-pill { background-color: #ffffff; border-color: rgba(0, 0, 0, 0.09); }
+.nookdo-light .nookdo-tab { color: rgba(0, 0, 0, 0.58); }
+.nookdo-light .nookdo-tab:hover, .nookdo-light .nookdo-tab:checked { color: #1d1d21; }
+.nookdo-light .nookdo-row:hover { background-color: rgba(0, 0, 0, 0.04); }
+.nookdo-light .nookdo-check { border-color: rgba(0, 0, 0, 0.28); }
+.nookdo-light .nookdo-check:hover { border-color: rgba(0, 0, 0, 0.55); background-color: rgba(0, 0, 0, 0.04); }
+.nookdo-light .nookdo-label { color: #1d1d21; }
+.nookdo-light .nookdo-row.done .nookdo-label { color: rgba(0, 0, 0, 0.36); }
+.nookdo-light .nookdo-edit-entry { color: #1d1d21; background-color: rgba(0, 0, 0, 0.05); }
+.nookdo-light .nookdo-del { color: rgba(0, 0, 0, 0.4); }
+.nookdo-light .nookdo-del:hover, .nookdo-light .nookdo-del:focus { color: #e11d48; background-color: rgba(225, 29, 72, 0.10); }
+.nookdo-light .nookdo-toast { background-color: rgba(0, 0, 0, 0.045); }
+.nookdo-light .nookdo-toast-btn:hover { background-color: rgba(0, 0, 0, 0.08); }
+.nookdo-light .nookdo-footer { border-color: rgba(0, 0, 0, 0.08); }
+.nookdo-light .nookdo-ghost-btn, .nookdo-light .nookdo-icon-btn { color: rgba(0, 0, 0, 0.58); }
+.nookdo-light .nookdo-ghost-btn:hover, .nookdo-light .nookdo-ghost-btn:focus, .nookdo-light .nookdo-icon-btn:hover, .nookdo-light .nookdo-icon-btn:focus { color: #1d1d21; background-color: rgba(0, 0, 0, 0.08); }
+
+
+/* ---------- accents (flat) ---------- */
+.nookdo-accent-blue .nookdo-badge, .nookdo-accent-blue .nookdo-add-btn { background-color: #3584e4; color: #ffffff; }
+.nookdo-accent-blue .nookdo-add-btn:hover { background-color: #3584e4; box-shadow: 0 2px 10px rgba(53, 132, 228, 0.4); }
+.nookdo-accent-blue .nookdo-check.checked { background-color: #3584e4; border-color: #3584e4; }
+.nookdo-accent-blue .nookdo-addbar:focus { border-color: rgba(53, 132, 228, 0.8); }
+.nookdo-accent-blue .nookdo-date, .nookdo-accent-blue .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-blue .nookdo-toast-btn, .nookdo-accent-blue .nookdo-empty-icon, .nookdo-accent-blue .nookdo-nudge-icon { color: #3584e4; }
+.nookdo-accent-blue .nookdo-entry { caret-color: #3584e4; selection-background-color: rgba(53, 132, 228, 0.35); }
+.nookdo-accent-blue .nookdo-nudge { background-color: rgba(53, 132, 228, 0.12); border: 1px solid rgba(53, 132, 228, 0.3); }
+.nookdo-accent-teal .nookdo-badge, .nookdo-accent-teal .nookdo-add-btn { background-color: #2190a4; color: #ffffff; }
+.nookdo-accent-teal .nookdo-add-btn:hover { background-color: #2190a4; box-shadow: 0 2px 10px rgba(33, 144, 164, 0.4); }
+.nookdo-accent-teal .nookdo-check.checked { background-color: #2190a4; border-color: #2190a4; }
+.nookdo-accent-teal .nookdo-addbar:focus { border-color: rgba(33, 144, 164, 0.8); }
+.nookdo-accent-teal .nookdo-date, .nookdo-accent-teal .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-teal .nookdo-toast-btn, .nookdo-accent-teal .nookdo-empty-icon, .nookdo-accent-teal .nookdo-nudge-icon { color: #2190a4; }
+.nookdo-accent-teal .nookdo-entry { caret-color: #2190a4; selection-background-color: rgba(33, 144, 164, 0.35); }
+.nookdo-accent-teal .nookdo-nudge { background-color: rgba(33, 144, 164, 0.12); border: 1px solid rgba(33, 144, 164, 0.3); }
+.nookdo-accent-green .nookdo-badge, .nookdo-accent-green .nookdo-add-btn { background-color: #3a944a; color: #ffffff; }
+.nookdo-accent-green .nookdo-add-btn:hover { background-color: #3a944a; box-shadow: 0 2px 10px rgba(58, 148, 74, 0.4); }
+.nookdo-accent-green .nookdo-check.checked { background-color: #3a944a; border-color: #3a944a; }
+.nookdo-accent-green .nookdo-addbar:focus { border-color: rgba(58, 148, 74, 0.8); }
+.nookdo-accent-green .nookdo-date, .nookdo-accent-green .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-green .nookdo-toast-btn, .nookdo-accent-green .nookdo-empty-icon, .nookdo-accent-green .nookdo-nudge-icon { color: #3a944a; }
+.nookdo-accent-green .nookdo-entry { caret-color: #3a944a; selection-background-color: rgba(58, 148, 74, 0.35); }
+.nookdo-accent-green .nookdo-nudge { background-color: rgba(58, 148, 74, 0.12); border: 1px solid rgba(58, 148, 74, 0.3); }
+.nookdo-accent-yellow .nookdo-badge, .nookdo-accent-yellow .nookdo-add-btn { background-color: #c88800; color: #1d1d21; }
+.nookdo-accent-yellow .nookdo-add-btn:hover { background-color: #c88800; box-shadow: 0 2px 10px rgba(200, 136, 0, 0.4); }
+.nookdo-accent-yellow .nookdo-check.checked { background-color: #c88800; border-color: #c88800; }
+.nookdo-accent-yellow .nookdo-addbar:focus { border-color: rgba(200, 136, 0, 0.8); }
+.nookdo-accent-yellow .nookdo-date, .nookdo-accent-yellow .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-yellow .nookdo-toast-btn, .nookdo-accent-yellow .nookdo-empty-icon, .nookdo-accent-yellow .nookdo-nudge-icon { color: #c88800; }
+.nookdo-accent-yellow .nookdo-entry { caret-color: #c88800; selection-background-color: rgba(200, 136, 0, 0.35); }
+.nookdo-accent-yellow .nookdo-nudge { background-color: rgba(200, 136, 0, 0.12); border: 1px solid rgba(200, 136, 0, 0.3); }
+.nookdo-accent-orange .nookdo-badge, .nookdo-accent-orange .nookdo-add-btn { background-color: #ed5b00; color: #ffffff; }
+.nookdo-accent-orange .nookdo-add-btn:hover { background-color: #ed5b00; box-shadow: 0 2px 10px rgba(237, 91, 0, 0.4); }
+.nookdo-accent-orange .nookdo-check.checked { background-color: #ed5b00; border-color: #ed5b00; }
+.nookdo-accent-orange .nookdo-addbar:focus { border-color: rgba(237, 91, 0, 0.8); }
+.nookdo-accent-orange .nookdo-date, .nookdo-accent-orange .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-orange .nookdo-toast-btn, .nookdo-accent-orange .nookdo-empty-icon, .nookdo-accent-orange .nookdo-nudge-icon { color: #ed5b00; }
+.nookdo-accent-orange .nookdo-entry { caret-color: #ed5b00; selection-background-color: rgba(237, 91, 0, 0.35); }
+.nookdo-accent-orange .nookdo-nudge { background-color: rgba(237, 91, 0, 0.12); border: 1px solid rgba(237, 91, 0, 0.3); }
+.nookdo-accent-red .nookdo-badge, .nookdo-accent-red .nookdo-add-btn { background-color: #e62d42; color: #ffffff; }
+.nookdo-accent-red .nookdo-add-btn:hover { background-color: #e62d42; box-shadow: 0 2px 10px rgba(230, 45, 66, 0.4); }
+.nookdo-accent-red .nookdo-check.checked { background-color: #e62d42; border-color: #e62d42; }
+.nookdo-accent-red .nookdo-addbar:focus { border-color: rgba(230, 45, 66, 0.8); }
+.nookdo-accent-red .nookdo-date, .nookdo-accent-red .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-red .nookdo-toast-btn, .nookdo-accent-red .nookdo-empty-icon, .nookdo-accent-red .nookdo-nudge-icon { color: #e62d42; }
+.nookdo-accent-red .nookdo-entry { caret-color: #e62d42; selection-background-color: rgba(230, 45, 66, 0.35); }
+.nookdo-accent-red .nookdo-nudge { background-color: rgba(230, 45, 66, 0.12); border: 1px solid rgba(230, 45, 66, 0.3); }
+.nookdo-accent-pink .nookdo-badge, .nookdo-accent-pink .nookdo-add-btn { background-color: #d56199; color: #ffffff; }
+.nookdo-accent-pink .nookdo-add-btn:hover { background-color: #d56199; box-shadow: 0 2px 10px rgba(213, 97, 153, 0.4); }
+.nookdo-accent-pink .nookdo-check.checked { background-color: #d56199; border-color: #d56199; }
+.nookdo-accent-pink .nookdo-addbar:focus { border-color: rgba(213, 97, 153, 0.8); }
+.nookdo-accent-pink .nookdo-date, .nookdo-accent-pink .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-pink .nookdo-toast-btn, .nookdo-accent-pink .nookdo-empty-icon, .nookdo-accent-pink .nookdo-nudge-icon { color: #d56199; }
+.nookdo-accent-pink .nookdo-entry { caret-color: #d56199; selection-background-color: rgba(213, 97, 153, 0.35); }
+.nookdo-accent-pink .nookdo-nudge { background-color: rgba(213, 97, 153, 0.12); border: 1px solid rgba(213, 97, 153, 0.3); }
+.nookdo-accent-purple .nookdo-badge, .nookdo-accent-purple .nookdo-add-btn { background-color: #9141ac; color: #ffffff; }
+.nookdo-accent-purple .nookdo-add-btn:hover { background-color: #9141ac; box-shadow: 0 2px 10px rgba(145, 65, 172, 0.4); }
+.nookdo-accent-purple .nookdo-check.checked { background-color: #9141ac; border-color: #9141ac; }
+.nookdo-accent-purple .nookdo-addbar:focus { border-color: rgba(145, 65, 172, 0.8); }
+.nookdo-accent-purple .nookdo-date, .nookdo-accent-purple .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-purple .nookdo-toast-btn, .nookdo-accent-purple .nookdo-empty-icon, .nookdo-accent-purple .nookdo-nudge-icon { color: #9141ac; }
+.nookdo-accent-purple .nookdo-entry { caret-color: #9141ac; selection-background-color: rgba(145, 65, 172, 0.35); }
+.nookdo-accent-purple .nookdo-nudge { background-color: rgba(145, 65, 172, 0.12); border: 1px solid rgba(145, 65, 172, 0.3); }
+.nookdo-accent-slate .nookdo-badge, .nookdo-accent-slate .nookdo-add-btn { background-color: #6f8396; color: #ffffff; }
+.nookdo-accent-slate .nookdo-add-btn:hover { background-color: #6f8396; box-shadow: 0 2px 10px rgba(111, 131, 150, 0.4); }
+.nookdo-accent-slate .nookdo-check.checked { background-color: #6f8396; border-color: #6f8396; }
+.nookdo-accent-slate .nookdo-addbar:focus { border-color: rgba(111, 131, 150, 0.8); }
+.nookdo-accent-slate .nookdo-date, .nookdo-accent-slate .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-slate .nookdo-toast-btn, .nookdo-accent-slate .nookdo-empty-icon, .nookdo-accent-slate .nookdo-nudge-icon { color: #6f8396; }
+.nookdo-accent-slate .nookdo-entry { caret-color: #6f8396; selection-background-color: rgba(111, 131, 150, 0.35); }
+.nookdo-accent-slate .nookdo-nudge { background-color: rgba(111, 131, 150, 0.12); border: 1px solid rgba(111, 131, 150, 0.3); }
+.nookdo-accent-ubuntu .nookdo-badge, .nookdo-accent-ubuntu .nookdo-add-btn { background-color: #e95420; color: #ffffff; }
+.nookdo-accent-ubuntu .nookdo-add-btn:hover { background-color: #e95420; box-shadow: 0 2px 10px rgba(233, 84, 32, 0.4); }
+.nookdo-accent-ubuntu .nookdo-check.checked { background-color: #e95420; border-color: #e95420; }
+.nookdo-accent-ubuntu .nookdo-addbar:focus { border-color: rgba(233, 84, 32, 0.8); }
+.nookdo-accent-ubuntu .nookdo-date, .nookdo-accent-ubuntu .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-ubuntu .nookdo-toast-btn, .nookdo-accent-ubuntu .nookdo-empty-icon, .nookdo-accent-ubuntu .nookdo-nudge-icon { color: #e95420; }
+.nookdo-accent-ubuntu .nookdo-entry { caret-color: #e95420; selection-background-color: rgba(233, 84, 32, 0.35); }
+.nookdo-accent-ubuntu .nookdo-nudge { background-color: rgba(233, 84, 32, 0.12); border: 1px solid rgba(233, 84, 32, 0.3); }
+.nookdo-accent-bark .nookdo-badge, .nookdo-accent-bark .nookdo-add-btn { background-color: #787859; color: #ffffff; }
+.nookdo-accent-bark .nookdo-add-btn:hover { background-color: #787859; box-shadow: 0 2px 10px rgba(120, 120, 89, 0.4); }
+.nookdo-accent-bark .nookdo-check.checked { background-color: #787859; border-color: #787859; }
+.nookdo-accent-bark .nookdo-addbar:focus { border-color: rgba(120, 120, 89, 0.8); }
+.nookdo-accent-bark .nookdo-date, .nookdo-accent-bark .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-bark .nookdo-toast-btn, .nookdo-accent-bark .nookdo-empty-icon, .nookdo-accent-bark .nookdo-nudge-icon { color: #787859; }
+.nookdo-accent-bark .nookdo-entry { caret-color: #787859; selection-background-color: rgba(120, 120, 89, 0.35); }
+.nookdo-accent-bark .nookdo-nudge { background-color: rgba(120, 120, 89, 0.12); border: 1px solid rgba(120, 120, 89, 0.3); }
+.nookdo-accent-sage .nookdo-badge, .nookdo-accent-sage .nookdo-add-btn { background-color: #657b69; color: #ffffff; }
+.nookdo-accent-sage .nookdo-add-btn:hover { background-color: #657b69; box-shadow: 0 2px 10px rgba(101, 123, 105, 0.4); }
+.nookdo-accent-sage .nookdo-check.checked { background-color: #657b69; border-color: #657b69; }
+.nookdo-accent-sage .nookdo-addbar:focus { border-color: rgba(101, 123, 105, 0.8); }
+.nookdo-accent-sage .nookdo-date, .nookdo-accent-sage .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-sage .nookdo-toast-btn, .nookdo-accent-sage .nookdo-empty-icon, .nookdo-accent-sage .nookdo-nudge-icon { color: #657b69; }
+.nookdo-accent-sage .nookdo-entry { caret-color: #657b69; selection-background-color: rgba(101, 123, 105, 0.35); }
+.nookdo-accent-sage .nookdo-nudge { background-color: rgba(101, 123, 105, 0.12); border: 1px solid rgba(101, 123, 105, 0.3); }
+.nookdo-accent-olive .nookdo-badge, .nookdo-accent-olive .nookdo-add-btn { background-color: #4b8501; color: #ffffff; }
+.nookdo-accent-olive .nookdo-add-btn:hover { background-color: #4b8501; box-shadow: 0 2px 10px rgba(75, 133, 1, 0.4); }
+.nookdo-accent-olive .nookdo-check.checked { background-color: #4b8501; border-color: #4b8501; }
+.nookdo-accent-olive .nookdo-addbar:focus { border-color: rgba(75, 133, 1, 0.8); }
+.nookdo-accent-olive .nookdo-date, .nookdo-accent-olive .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-olive .nookdo-toast-btn, .nookdo-accent-olive .nookdo-empty-icon, .nookdo-accent-olive .nookdo-nudge-icon { color: #4b8501; }
+.nookdo-accent-olive .nookdo-entry { caret-color: #4b8501; selection-background-color: rgba(75, 133, 1, 0.35); }
+.nookdo-accent-olive .nookdo-nudge { background-color: rgba(75, 133, 1, 0.12); border: 1px solid rgba(75, 133, 1, 0.3); }
+.nookdo-accent-viridian .nookdo-badge, .nookdo-accent-viridian .nookdo-add-btn { background-color: #03875b; color: #ffffff; }
+.nookdo-accent-viridian .nookdo-add-btn:hover { background-color: #03875b; box-shadow: 0 2px 10px rgba(3, 135, 91, 0.4); }
+.nookdo-accent-viridian .nookdo-check.checked { background-color: #03875b; border-color: #03875b; }
+.nookdo-accent-viridian .nookdo-addbar:focus { border-color: rgba(3, 135, 91, 0.8); }
+.nookdo-accent-viridian .nookdo-date, .nookdo-accent-viridian .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-viridian .nookdo-toast-btn, .nookdo-accent-viridian .nookdo-empty-icon, .nookdo-accent-viridian .nookdo-nudge-icon { color: #03875b; }
+.nookdo-accent-viridian .nookdo-entry { caret-color: #03875b; selection-background-color: rgba(3, 135, 91, 0.35); }
+.nookdo-accent-viridian .nookdo-nudge { background-color: rgba(3, 135, 91, 0.12); border: 1px solid rgba(3, 135, 91, 0.3); }
+.nookdo-accent-prussiangreen .nookdo-badge, .nookdo-accent-prussiangreen .nookdo-add-btn { background-color: #308280; color: #ffffff; }
+.nookdo-accent-prussiangreen .nookdo-add-btn:hover { background-color: #308280; box-shadow: 0 2px 10px rgba(48, 130, 128, 0.4); }
+.nookdo-accent-prussiangreen .nookdo-check.checked { background-color: #308280; border-color: #308280; }
+.nookdo-accent-prussiangreen .nookdo-addbar:focus { border-color: rgba(48, 130, 128, 0.8); }
+.nookdo-accent-prussiangreen .nookdo-date, .nookdo-accent-prussiangreen .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-prussiangreen .nookdo-toast-btn, .nookdo-accent-prussiangreen .nookdo-empty-icon, .nookdo-accent-prussiangreen .nookdo-nudge-icon { color: #308280; }
+.nookdo-accent-prussiangreen .nookdo-entry { caret-color: #308280; selection-background-color: rgba(48, 130, 128, 0.35); }
+.nookdo-accent-prussiangreen .nookdo-nudge { background-color: rgba(48, 130, 128, 0.12); border: 1px solid rgba(48, 130, 128, 0.3); }
+.nookdo-accent-yaru-blue .nookdo-badge, .nookdo-accent-yaru-blue .nookdo-add-btn { background-color: #0073e5; color: #ffffff; }
+.nookdo-accent-yaru-blue .nookdo-add-btn:hover { background-color: #0073e5; box-shadow: 0 2px 10px rgba(0, 115, 229, 0.4); }
+.nookdo-accent-yaru-blue .nookdo-check.checked { background-color: #0073e5; border-color: #0073e5; }
+.nookdo-accent-yaru-blue .nookdo-addbar:focus { border-color: rgba(0, 115, 229, 0.8); }
+.nookdo-accent-yaru-blue .nookdo-date, .nookdo-accent-yaru-blue .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-yaru-blue .nookdo-toast-btn, .nookdo-accent-yaru-blue .nookdo-empty-icon, .nookdo-accent-yaru-blue .nookdo-nudge-icon { color: #0073e5; }
+.nookdo-accent-yaru-blue .nookdo-entry { caret-color: #0073e5; selection-background-color: rgba(0, 115, 229, 0.35); }
+.nookdo-accent-yaru-blue .nookdo-nudge { background-color: rgba(0, 115, 229, 0.12); border: 1px solid rgba(0, 115, 229, 0.3); }
+.nookdo-accent-yaru-purple .nookdo-badge, .nookdo-accent-yaru-purple .nookdo-add-btn { background-color: #7764d8; color: #ffffff; }
+.nookdo-accent-yaru-purple .nookdo-add-btn:hover { background-color: #7764d8; box-shadow: 0 2px 10px rgba(119, 100, 216, 0.4); }
+.nookdo-accent-yaru-purple .nookdo-check.checked { background-color: #7764d8; border-color: #7764d8; }
+.nookdo-accent-yaru-purple .nookdo-addbar:focus { border-color: rgba(119, 100, 216, 0.8); }
+.nookdo-accent-yaru-purple .nookdo-date, .nookdo-accent-yaru-purple .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-yaru-purple .nookdo-toast-btn, .nookdo-accent-yaru-purple .nookdo-empty-icon, .nookdo-accent-yaru-purple .nookdo-nudge-icon { color: #7764d8; }
+.nookdo-accent-yaru-purple .nookdo-entry { caret-color: #7764d8; selection-background-color: rgba(119, 100, 216, 0.35); }
+.nookdo-accent-yaru-purple .nookdo-nudge { background-color: rgba(119, 100, 216, 0.12); border: 1px solid rgba(119, 100, 216, 0.3); }
+.nookdo-accent-magenta .nookdo-badge, .nookdo-accent-magenta .nookdo-add-btn { background-color: #b34cb3; color: #ffffff; }
+.nookdo-accent-magenta .nookdo-add-btn:hover { background-color: #b34cb3; box-shadow: 0 2px 10px rgba(179, 76, 179, 0.4); }
+.nookdo-accent-magenta .nookdo-check.checked { background-color: #b34cb3; border-color: #b34cb3; }
+.nookdo-accent-magenta .nookdo-addbar:focus { border-color: rgba(179, 76, 179, 0.8); }
+.nookdo-accent-magenta .nookdo-date, .nookdo-accent-magenta .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-magenta .nookdo-toast-btn, .nookdo-accent-magenta .nookdo-empty-icon, .nookdo-accent-magenta .nookdo-nudge-icon { color: #b34cb3; }
+.nookdo-accent-magenta .nookdo-entry { caret-color: #b34cb3; selection-background-color: rgba(179, 76, 179, 0.35); }
+.nookdo-accent-magenta .nookdo-nudge { background-color: rgba(179, 76, 179, 0.12); border: 1px solid rgba(179, 76, 179, 0.3); }
+.nookdo-accent-yaru-red .nookdo-badge, .nookdo-accent-yaru-red .nookdo-add-btn { background-color: #da3450; color: #ffffff; }
+.nookdo-accent-yaru-red .nookdo-add-btn:hover { background-color: #da3450; box-shadow: 0 2px 10px rgba(218, 52, 80, 0.4); }
+.nookdo-accent-yaru-red .nookdo-check.checked { background-color: #da3450; border-color: #da3450; }
+.nookdo-accent-yaru-red .nookdo-addbar:focus { border-color: rgba(218, 52, 80, 0.8); }
+.nookdo-accent-yaru-red .nookdo-date, .nookdo-accent-yaru-red .nookdo-tab:checked .nookdo-tab-count, .nookdo-accent-yaru-red .nookdo-toast-btn, .nookdo-accent-yaru-red .nookdo-empty-icon, .nookdo-accent-yaru-red .nookdo-nudge-icon { color: #da3450; }
+.nookdo-accent-yaru-red .nookdo-entry { caret-color: #da3450; selection-background-color: rgba(218, 52, 80, 0.35); }
+.nookdo-accent-yaru-red .nookdo-nudge { background-color: rgba(218, 52, 80, 0.12); border: 1px solid rgba(218, 52, 80, 0.3); }

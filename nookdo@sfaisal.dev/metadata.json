@@ -1,0 +1,17 @@
+{
+  "uuid": "nookdo@sfaisal.dev",
+  "name": "Nookdo",
+  "description": "A small, beautifully animated to-do list in your top bar. Add, complete and clear tasks from a smooth popup, with optional gentle reminders that pop up on a timer only while you still have something to do.\n\nShortcut: Super+Alt+T",
+  "shell-version": [
+    "45",
+    "46",
+    "47",
+    "48",
+    "49",
+    "50",
+    "51"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.nookdo",
+  "url": "https://github.com/sfaisaldev/nookdo",
+  "version-name": "1.0"
+}

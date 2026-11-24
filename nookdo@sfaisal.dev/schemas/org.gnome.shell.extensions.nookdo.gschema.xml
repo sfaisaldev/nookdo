@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.nookdo" path="/org/gnome/shell/extensions/nookdo/">
+
+    <key name="reminder-enabled" type="b">
+      <default>true</default>
+      <summary>Pop up on a timer</summary>
+      <description>Open the popup automatically on an interval, but only when there are unfinished tasks.</description>
+    </key>
+
+    <key name="reminder-interval" type="i">
+      <range min="1" max="720"/>
+      <default>60</default>
+      <summary>Reminder interval in minutes</summary>
+    </key>
+
+    <key name="reminder-skip-fullscreen" type="b">
+      <default>true</default>
+      <summary>Do not pop up over fullscreen apps</summary>
+    </key>
+
+    <key name="reminder-autoclose" type="i">
+      <range min="0" max="600"/>
+      <default>20</default>
+      <summary>Auto-hide a reminder popup after this many seconds if untouched (0 keeps it open)</summary>
+    </key>
+
+    <key name="reminder-preview" type="i">
+      <default>0</default>
+      <summary>Internal: bumped by the preferences window to preview a reminder</summary>
+    </key>
+
+    <key name="accent" type="s">
+      <choices>
+        <choice value="system"/>
+        <choice value="blue"/>
+        <choice value="teal"/>
+        <choice value="green"/>
+        <choice value="orange"/>
+        <choice value="red"/>
+        <choice value="slate"/>
+      </choices>
+      <default>'system'</default>
+      <summary>Accent colour ("system" follows the desktop accent)</summary>
+    </key>
+
+    <key name="theme" type="s">
+      <choices>
+        <choice value="system"/>
+        <choice value="light"/>
+        <choice value="dark"/>
+      </choices>
+      <default>'system'</default>
+      <summary>Light or dark popup ("system" follows the desktop style)</summary>
+    </key>
+
+    <key name="show-badge" type="b">
+      <default>true</default>
+      <summary>Show the number of open tasks in the top bar</summary>
+    </key>
+
+    <key name="celebrate" type="b">
+      <default>true</default>
+      <summary>Confetti when tasks are completed</summary>
+    </key>
+
+    <key name="completed-to-bottom" type="b">
+      <default>true</default>
+      <summary>Move completed tasks to the bottom of the list</summary>
+    </key>
+
+    <key name="toggle-shortcut" type="as">
+      <default><![CDATA[['<Super><Alt>t']]]></default>
+      <summary>Keyboard shortcut that opens and closes the popup</summary>
+    </key>
+
+  </schema>
+</schemalist>
