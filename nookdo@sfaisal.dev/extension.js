@@ -1,5 +1,6 @@
 // Nookdo — a beautifully animated task list for the GNOME top bar
-// Copyright (C) 2026 Sayed Faisal (sfaisal.dev) — GPL-2.0-or-later
+// SPDX-License-Identifier: GPL-2.0-or-later
+// Copyright (C) 2026 sfaisal.dev
 
 import Meta from 'gi://Meta';
 import Shell from 'gi://Shell';
